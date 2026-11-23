@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171226">
+  <title>3DMATRIX OFICIAL | Solicitar presupuesto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <main class="wrap">
+    <header class="brand">
+      <div class="logo-mark">3D</div>
+      <div><h1>3DMATRIX <span>OFICIAL</span></h1><p>Impresión 3D · Solicita tu presupuesto</p></div>
+    </header>
+
+    <section class="panel">
+      <h2>Cuéntanos qué necesitas</h2>
+      <p class="intro">Rellena los dos campos obligatorios y enviaremos tu solicitud directamente a nuestro Discord.</p>
+      <form id="orderForm">
+        <label for="phone">Teléfono de contacto <b class="required">Obligatorio</b></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Tu número de teléfono" required maxlength="30">
+
+        <label for="description">¿Qué quieres fabricar? <b class="required">Obligatorio</b></label>
+        <textarea id="description" name="description" rows="5" placeholder="Describe la pieza, idea o trabajo que necesitas..." required maxlength="1800"></textarea>
+
+        <div class="optional-title">Información adicional <span>Opcional</span></div>
+        <label for="dimensions">Medidas aproximadas</label>
+        <input id="dimensions" name="dimensions" type="text" placeholder="Ej.: 10 × 5 × 3 cm">
+
+        <label for="color">Color deseado</label>
+        <input id="color" name="color" type="text" placeholder="Ej.: negro, blanco, rojo...">
+
+        <label for="photos">Fotografías <span class="optional">Opcional · hasta 3 imágenes</span></label>
+        <input id="photos" name="photos" type="file" accept="image/*" multiple>
+        <small class="hint">Puedes adjuntar hasta 3 imágenes. Máximo 8 MB por imagen.</small>
+
+        <label class="consent"><input id="consent" type="checkbox" required> <span>Acepto que se utilicen estos datos para responder a mi solicitud.</span></label>
+        <button id="submitBtn" type="submit">ENVIAR PEDIDO</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="privacy">Tus datos se enviarán al canal de pedidos de 3DMATRIX OFICIAL para poder responder a tu solicitud.</p>
+    </section>
+    <footer>© 3DMATRIX OFICIAL</footer>
+  </main>
+
+  <aside class="music-player" aria-label="Reproductor de música">
+    <div class="music-icon">♫</div>
+    <div class="music-info">
+      <strong>3DMATRIX MUSIC</strong>
+      <span>Música de fondo · YouTube</span>
+    </div>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Mostrar u ocultar reproductor">MÚSICA</button>
+    <div class="youtube-frame" id="youtubeFrame" hidden>
+      <iframe
+        id="youtubeMusic"
+        title="Música de fondo de 3DMATRIX OFICIAL"
+        width="280"
+        height="158"
+        src="https://www.youtube-nocookie.com/embed/AmBBSd6CWcs?enablejsapi=1&loop=1&playlist=AmBBSd6CWcs&controls=1&rel=0"
+        allow="encrypted-media; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      <p>La reproducción comienza cuando pulses play. El bucle depende de la disponibilidad del vídeo en YouTube.</p>
+    </div>
+  </aside>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
