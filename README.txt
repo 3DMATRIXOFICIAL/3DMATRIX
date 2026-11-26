@@ -1,10 +1,11 @@
-3DMATRIX OFICIAL - ENVÍO A DISCORD
+3DMATRIX OFICIAL - FORMULARIO, LOGO, MÚSICA Y ENVÍO A DISCORD
 
 ARCHIVOS:
 - index.html: formulario
 - style.css: diseño morado y nieve
 - script.js: validación y envío del pedido
 - config.js: configuración del webhook
+- logo.jpg: logotipo original de 3DMATRIX OFICIAL
 
 IMPORTANTE SOBRE EL WEBHOOK:
 El webhook que se compartió en el chat debe considerarse comprometido. Elimínalo
@@ -17,7 +18,7 @@ CONFIGURACIÓN:
 4. Espera a que GitHub Pages publique los cambios y prueba un pedido.
 
 CAMPOS:
-Obligatorios: teléfono y descripción.
+Obligatorios: nombre, teléfono y descripción.
 Opcionales: medidas, color y hasta 3 fotografías (máximo 8 MB cada una).
 
 LIMITACIÓN Y SEGURIDAD:
@@ -41,3 +42,7 @@ La reproducción no comienza automáticamente: el visitante pulsa play en YouTub
 El reproductor está configurado con loop=1 y playlist=el mismo ID, que es el
 parámetro requerido por YouTube para repetir un vídeo individual. La repetición
 puede depender de restricciones, disponibilidad, edad o derechos del vídeo.
+
+
+CATÁLOGO MAKERWORLD
+La página incluye un botón para abrir https://makerworld.com/es y un campo opcional para pegar el enlace del modelo elegido. El enlace se envía en el pedido de Discord junto con el resto de datos. El catálogo se abre en una pestaña nueva; no se incrusta dentro de la web.

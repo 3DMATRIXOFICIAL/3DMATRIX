@@ -15,16 +15,28 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
+  const name = document.getElementById("name").value.trim();
   const phone = document.getElementById("phone").value.trim();
   const description = document.getElementById("description").value.trim();
+  const makerworldUrl = document.getElementById("makerworldUrl").value.trim();
   const dimensions = document.getElementById("dimensions").value.trim();
   const color = document.getElementById("color").value.trim();
   const files = Array.from(photosInput.files || []);
 
-  if (!phone || !description) {
+  if (!name || !phone || !description) {
     statusBox.classList.add("err");
-    statusBox.textContent = "El teléfono y la descripción son obligatorios.";
+    statusBox.textContent = "El nombre, el teléfono y la descripción son obligatorios.";
     return;
+  }
+  if (makerworldUrl) {
+    try {
+      const parsedUrl = new URL(makerworldUrl);
+      if (parsedUrl.protocol !== "https:" || parsedUrl.hostname !== "makerworld.com" && !parsedUrl.hostname.endsWith(".makerworld.com")) throw new Error("URL no válida");
+    } catch {
+      statusBox.classList.add("err");
+      statusBox.textContent = "Pega un enlace válido de MakerWorld que empiece por https://makerworld.com/.";
+      return;
+    }
   }
   if (files.length > 3) {
     statusBox.classList.add("err");
@@ -43,8 +55,10 @@ form.addEventListener("submit", async (event) => {
   }
 
   const fields = [
+    { name: "Nombre", value: name },
     { name: "Teléfono", value: phone },
     { name: "Descripción", value: description },
+    { name: "Enlace del modelo en MakerWorld", value: makerworldUrl || "No indicado" },
     { name: "Medidas", value: dimensions || "No indicadas" },
     { name: "Color", value: color || "No indicado" },
     { name: "Fotografías", value: files.length ? `${files.length} imagen(es) adjunta(s)` : "No adjuntas" }

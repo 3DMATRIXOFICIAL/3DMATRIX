@@ -11,7 +11,7 @@
   <canvas id="snow" aria-hidden="true"></canvas>
   <main class="wrap">
     <header class="brand">
-      <div class="logo-mark">3D</div>
+      <img class="brand-logo" src="logo.jpg" alt="Logo 3DMATRIX OFICIAL">
       <div><h1>3DMATRIX <span>OFICIAL</span></h1><p>Impresión 3D · Solicita tu presupuesto</p></div>
     </header>
 
@@ -19,11 +19,22 @@
       <h2>Cuéntanos qué necesitas</h2>
       <p class="intro">Rellena los dos campos obligatorios y enviaremos tu solicitud directamente a nuestro Discord.</p>
       <form id="orderForm">
+        <label for="name">Nombre <b class="required">Obligatorio</b></label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required maxlength="80">
+
         <label for="phone">Teléfono de contacto <b class="required">Obligatorio</b></label>
         <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Tu número de teléfono" required maxlength="30">
 
         <label for="description">¿Qué quieres fabricar? <b class="required">Obligatorio</b></label>
         <textarea id="description" name="description" rows="5" placeholder="Describe la pieza, idea o trabajo que necesitas..." required maxlength="1800"></textarea>
+        <div class="makerworld-box">
+          <h3>¿Has encontrado tu pieza en MakerWorld?</h3>
+          <p>Busca el modelo que quieres, abre su página y copia el enlace para pegarlo aquí. Así podremos ver exactamente qué quieres imprimir.</p>
+          <a class="makerworld-link" href="https://makerworld.com/es" target="_blank" rel="noopener noreferrer">BUSCAR PIEZAS EN MAKERWORLD ↗</a>
+          <label for="makerworldUrl">Enlace del modelo <span class="optional">Opcional</span></label>
+          <input id="makerworldUrl" name="makerworldUrl" type="url" inputmode="url" placeholder="https://makerworld.com/..." maxlength="500">
+          <small class="hint">En MakerWorld: abre el modelo, copia la dirección de la página y pégala en este campo.</small>
+        </div>
 
         <div class="optional-title">Información adicional <span>Opcional</span></div>
         <label for="dimensions">Medidas aproximadas</label>
