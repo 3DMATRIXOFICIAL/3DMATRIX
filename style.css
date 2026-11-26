@@ -10,20 +10,11 @@
 @media(max-width:480px){.music-player{right:10px;bottom:10px}.music-info{min-width:90px}.youtube-frame{width:min(280px,calc(100vw - 56px))}}
 
 
-/* Sección de búsqueda de modelos MakerWorld */
-.makerworld-box{margin-top:24px;padding:18px;border:1px solid #7655a0;border-radius:15px;background:linear-gradient(135deg,#302044,#21182f)}
-.makerworld-box h3{margin:0 0 8px;font-size:17px;color:#eadcff}
-.makerworld-box p{margin:0 0 14px;color:#c9bfd7;font-size:13px;line-height:1.5}
-.makerworld-box label{margin-top:16px}
-.makerworld-link{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;width:100%;border-radius:11px;padding:14px 12px;background:linear-gradient(100deg,#8c50d6,#6738ad);color:#fff;font-size:13px;font-weight:900;letter-spacing:.4px}
-.makerworld-link:focus{outline:2px solid #fff;outline-offset:3px}
 
 
-/* Catálogo MakerWorld incrustado: si el sitio lo permite, se verá dentro de la web */
-.makerworld-embed{margin:14px 0 18px;border:1px solid #7655a0;border-radius:12px;overflow:hidden;background:#171222}
-.makerworld-embed-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;background:#2b203b;color:#eadcff;font-size:12px}
-.makerworld-open{color:#d8baff;font-weight:800;text-decoration:none;white-space:nowrap}
-.makerworld-open:hover{text-decoration:underline}
-.makerworld-frame{display:block;width:100%;height:650px;border:0;background:#fff}
-.makerworld-note{margin:0;padding:10px 12px;color:#c9bfd7;font-size:11px;line-height:1.45}
-@media(max-width:480px){.makerworld-frame{height:560px}.makerworld-embed-head{align-items:flex-start;flex-direction:column;gap:7px}}
+
+/* Enlace al perfil oficial de TikTok */
+.tiktok-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin:12px auto 0;padding:11px 17px;border:1px solid #8e62c5;border-radius:999px;background:linear-gradient(100deg,#241a32,#39234f);color:#fff;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.2px;transition:transform .18s ease,filter .18s ease}
+.tiktok-link:hover{transform:translateY(-2px);filter:brightness(1.18)}
+.tiktok-link .tiktok-mark{font-size:18px;font-weight:900}
+.social-footer{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px;color:#c9bfd7;font-size:12px}

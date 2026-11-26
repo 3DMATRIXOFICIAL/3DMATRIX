@@ -54,3 +54,6 @@ Esto solo funcionará si MakerWorld permite que su web se muestre dentro de pág
 Si MakerWorld bloquea la inserción, el recuadro puede aparecer en blanco o mostrar un error.
 En ese caso, el botón "Abrir en otra pestaña" permite seguir usando MakerWorld y copiar el enlace del modelo.
 El enlace pegado en el formulario se incluye en el pedido enviado a Discord.
+
+
+ACTUALIZACIÓN: se ha eliminado la sección y el campo de MakerWorld. Se ha añadido un enlace al perfil de TikTok https://www.tiktok.com/@3dmatrixoficial.

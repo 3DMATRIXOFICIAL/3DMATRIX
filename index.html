@@ -17,7 +17,7 @@
 
     <section class="panel">
       <h2>Cuéntanos qué necesitas</h2>
-      <p class="intro">Rellena los dos campos obligatorios y enviaremos tu solicitud directamente a nuestro Discord.</p>
+      <p class="intro">Rellena los campos obligatorios y enviaremos tu solicitud directamente a nuestro Discord.</p>
       <form id="orderForm">
         <label for="name">Nombre <b class="required">Obligatorio</b></label>
         <input id="name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required maxlength="80">
@@ -27,29 +27,7 @@
 
         <label for="description">¿Qué quieres fabricar? <b class="required">Obligatorio</b></label>
         <textarea id="description" name="description" rows="5" placeholder="Describe la pieza, idea o trabajo que necesitas..." required maxlength="1800"></textarea>
-        <div class="makerworld-box">
-          <h3>¿Has encontrado tu pieza en MakerWorld?</h3>
-          <p>Busca el modelo que quieres, abre su página y copia el enlace para pegarlo aquí. Así podremos ver exactamente qué quieres imprimir.</p>
-          <div class="makerworld-embed">
-            <div class="makerworld-embed-head">
-              <strong>CATÁLOGO MAKERWORLD</strong>
-              <a class="makerworld-open" href="https://makerworld.com/es" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña ↗</a>
-            </div>
-            <iframe
-              class="makerworld-frame"
-              src="https://makerworld.com/es"
-              title="Catálogo de modelos 3D de MakerWorld"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="clipboard-read; clipboard-write; fullscreen"
-              allowfullscreen>
-            </iframe>
-            <p class="makerworld-note">Si el catálogo aparece en blanco o no permite buscar, MakerWorld está bloqueando su visualización dentro de otras páginas. Pulsa «Abrir en otra pestaña» y copia allí el enlace del modelo.</p>
-          </div>
-          <label for="makerworldUrl">Enlace del modelo <span class="optional">Opcional</span></label>
-          <input id="makerworldUrl" name="makerworldUrl" type="url" inputmode="url" placeholder="https://makerworld.com/..." maxlength="500">
-          <small class="hint">En MakerWorld: abre el modelo, copia la dirección de la página y pégala en este campo.</small>
-        </div>
+
 
         <div class="optional-title">Información adicional <span>Opcional</span></div>
         <label for="dimensions">Medidas aproximadas</label>
@@ -68,7 +46,14 @@
       </form>
       <p class="privacy">Tus datos se enviarán al canal de pedidos de 3DMATRIX OFICIAL para poder responder a tu solicitud.</p>
     </section>
-    <footer>© 3DMATRIX OFICIAL</footer>
+    <footer>
+      © 3DMATRIX OFICIAL
+      <div class="social-footer">
+        <a class="tiktok-link" href="https://www.tiktok.com/@3dmatrixoficial" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro TikTok @3dmatrixoficial">
+          <span class="tiktok-mark">♪</span> Síguenos en TikTok <strong>@3dmatrixoficial</strong>
+        </a>
+      </div>
+    </footer>
   </main>
 
   <aside class="music-player" aria-label="Reproductor de música">
