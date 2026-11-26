@@ -15,6 +15,12 @@
       <div><h1>3DMATRIX <span>OFICIAL</span></h1><p>Impresión 3D · Solicita tu presupuesto</p></div>
     </header>
 
+    <a class="tiktok-feature" href="https://www.tiktok.com/@3dmatrixoficial" target="_blank" rel="noopener noreferrer">
+      <span class="tiktok-feature-icon" aria-hidden="true">♪</span>
+      <span class="tiktok-feature-copy"><strong>¡SÍGUENOS EN TIKTOK!</strong><small>@3dmatrixoficial · Novedades, diseños y trabajos</small></span>
+      <span class="tiktok-feature-arrow" aria-hidden="true">↗</span>
+    </a>
+
     <section class="panel">
       <h2>Cuéntanos qué necesitas</h2>
       <p class="intro">Rellena los campos obligatorios y enviaremos tu solicitud directamente a nuestro Discord.</p>
@@ -48,11 +54,7 @@
     </section>
     <footer>
       © 3DMATRIX OFICIAL
-      <div class="social-footer">
-        <a class="tiktok-link" href="https://www.tiktok.com/@3dmatrixoficial" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro TikTok @3dmatrixoficial">
-          <span class="tiktok-mark">♪</span> Síguenos en TikTok <strong>@3dmatrixoficial</strong>
-        </a>
-      </div>
+
     </footer>
   </main>
 
@@ -60,22 +62,10 @@
     <div class="music-icon">♫</div>
     <div class="music-info">
       <strong>3DMATRIX MUSIC</strong>
-      <span>Música de fondo · YouTube</span>
+      <span>Autumn Chill · Reproducción en bucle</span>
     </div>
-    <button class="music-toggle" id="musicToggle" type="button" aria-label="Mostrar u ocultar reproductor">MÚSICA</button>
-    <div class="youtube-frame" id="youtubeFrame" hidden>
-      <iframe
-        id="youtubeMusic"
-        title="Música de fondo de 3DMATRIX OFICIAL"
-        width="280"
-        height="158"
-        src="https://www.youtube-nocookie.com/embed/AmBBSd6CWcs?enablejsapi=1&loop=1&playlist=AmBBSd6CWcs&controls=1&rel=0"
-        allow="encrypted-media; picture-in-picture"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-      <p>La reproducción comienza cuando pulses play. El bucle depende de la disponibilidad del vídeo en YouTube.</p>
-    </div>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir o pausar música">▶ MÚSICA</button>
+    <audio id="backgroundMusic" src="autumn-chill.mp3" loop preload="auto"></audio>
   </aside>
 
   <script src="config.js"></script>

@@ -57,3 +57,6 @@ El enlace pegado en el formulario se incluye en el pedido enviado a Discord.
 
 
 ACTUALIZACIÓN: se ha eliminado la sección y el campo de MakerWorld. Se ha añadido un enlace al perfil de TikTok https://www.tiktok.com/@3dmatrixoficial.
+
+
+ACTUALIZACIÓN: La web incluye un botón destacado al perfil TikTok @3dmatrixoficial y el archivo autumn-chill.mp3 como música de fondo en bucle. Algunos navegadores bloquean el inicio automático con sonido; si no arranca, pulsa el botón MÚSICA.

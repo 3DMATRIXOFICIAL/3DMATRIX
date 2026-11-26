@@ -118,15 +118,23 @@ form.addEventListener("submit", async (event) => {
 })();
 
 
-// Mostrar u ocultar el reproductor de YouTube. No inicia sonido automáticamente.
+// Reproductor MP3 en bucle. Algunos navegadores bloquean el autoplay con sonido;
+// el visitante puede iniciar la música con el botón.
 (() => {
+  const audio = document.getElementById("backgroundMusic");
   const toggle = document.getElementById("musicToggle");
-  const frame = document.getElementById("youtubeFrame");
-  if (!toggle || !frame) return;
-  toggle.addEventListener("click", () => {
-    const opening = frame.hidden;
-    frame.hidden = !opening;
-    toggle.textContent = opening ? "OCULTAR" : "MÚSICA";
-    toggle.setAttribute("aria-expanded", String(opening));
+  if (!audio || !toggle) return;
+  const paint = () => {
+    toggle.textContent = audio.paused ? "▶ MÚSICA" : "Ⅱ PAUSAR";
+    toggle.setAttribute("aria-label", audio.paused ? "Reproducir música" : "Pausar música");
+  };
+  toggle.addEventListener("click", async () => {
+    if (audio.paused) {
+      try { await audio.play(); } catch (error) { console.warn("El navegador no permitió reproducir el audio.", error); }
+    } else { audio.pause(); }
+    paint();
   });
+  audio.addEventListener("play", paint);
+  audio.addEventListener("pause", paint);
+  audio.play().then(paint).catch(() => paint());
 })();
