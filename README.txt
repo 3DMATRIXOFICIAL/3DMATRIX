@@ -46,3 +46,11 @@ puede depender de restricciones, disponibilidad, edad o derechos del vídeo.
 
 CATÁLOGO MAKERWORLD
 La página incluye un botón para abrir https://makerworld.com/es y un campo opcional para pegar el enlace del modelo elegido. El enlace se envía en el pedido de Discord junto con el resto de datos. El catálogo se abre en una pestaña nueva; no se incrusta dentro de la web.
+
+
+CATÁLOGO MAKERWORLD INCRUSTADO
+Se ha añadido un intento de mostrar https://makerworld.com/es dentro de la página mediante un iframe.
+Esto solo funcionará si MakerWorld permite que su web se muestre dentro de páginas externas.
+Si MakerWorld bloquea la inserción, el recuadro puede aparecer en blanco o mostrar un error.
+En ese caso, el botón "Abrir en otra pestaña" permite seguir usando MakerWorld y copiar el enlace del modelo.
+El enlace pegado en el formulario se incluye en el pedido enviado a Discord.

@@ -30,7 +30,22 @@
         <div class="makerworld-box">
           <h3>¿Has encontrado tu pieza en MakerWorld?</h3>
           <p>Busca el modelo que quieres, abre su página y copia el enlace para pegarlo aquí. Así podremos ver exactamente qué quieres imprimir.</p>
-          <a class="makerworld-link" href="https://makerworld.com/es" target="_blank" rel="noopener noreferrer">BUSCAR PIEZAS EN MAKERWORLD ↗</a>
+          <div class="makerworld-embed">
+            <div class="makerworld-embed-head">
+              <strong>CATÁLOGO MAKERWORLD</strong>
+              <a class="makerworld-open" href="https://makerworld.com/es" target="_blank" rel="noopener noreferrer">Abrir en otra pestaña ↗</a>
+            </div>
+            <iframe
+              class="makerworld-frame"
+              src="https://makerworld.com/es"
+              title="Catálogo de modelos 3D de MakerWorld"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="clipboard-read; clipboard-write; fullscreen"
+              allowfullscreen>
+            </iframe>
+            <p class="makerworld-note">Si el catálogo aparece en blanco o no permite buscar, MakerWorld está bloqueando su visualización dentro de otras páginas. Pulsa «Abrir en otra pestaña» y copia allí el enlace del modelo.</p>
+          </div>
           <label for="makerworldUrl">Enlace del modelo <span class="optional">Opcional</span></label>
           <input id="makerworldUrl" name="makerworldUrl" type="url" inputmode="url" placeholder="https://makerworld.com/..." maxlength="500">
           <small class="hint">En MakerWorld: abre el modelo, copia la dirección de la página y pégala en este campo.</small>
