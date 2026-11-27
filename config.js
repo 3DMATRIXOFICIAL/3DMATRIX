@@ -9,4 +9,4 @@
   inspeccione la página. Si quieres mantenerla secreta, necesitas un servidor
   intermediario. Revoca el webhook si empieza a recibir mensajes no deseados.
 */
-window.DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1574411629435559998/zswGtfrXYUGomDAGGxinPCU7SbFlXNwKyc4zb5aM_oWRhOAB47jDWu2_IO7PMiK1tQHr";
+window.DISCORD_WEBHOOK_URL = "PEGA_AQUI_TU_WEBHOOK_NUEVO";

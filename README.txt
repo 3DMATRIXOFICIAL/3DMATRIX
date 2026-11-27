@@ -60,3 +60,10 @@ ACTUALIZACIÓN: se ha eliminado la sección y el campo de MakerWorld. Se ha aña
 
 
 ACTUALIZACIÓN: La web incluye un botón destacado al perfil TikTok @3dmatrixoficial y el archivo autumn-chill.mp3 como música de fondo en bucle. Algunos navegadores bloquean el inicio automático con sonido; si no arranca, pulsa el botón MÚSICA.
+
+
+ACTUALIZACIÓN: ENVÍO DE PEDIDOS POR WHATSAPP PERSONAL
+El formulario prepara un mensaje y abre WhatsApp con los datos del pedido.
+El cliente debe revisar y pulsar Enviar. Las fotografías elegidas en el
+formulario no se adjuntan automáticamente; el cliente debe añadirlas al chat.
+La integración usa un enlace wa.me y no requiere WhatsApp Business ni un bot.

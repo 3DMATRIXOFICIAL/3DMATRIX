@@ -3,17 +3,10 @@ const statusBox = document.getElementById("status");
 const submitBtn = document.getElementById("submitBtn");
 const photosInput = document.getElementById("photos");
 
-form.addEventListener("submit", async (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   statusBox.className = "status";
   statusBox.textContent = "";
-
-  const webhook = window.DISCORD_WEBHOOK_URL;
-  if (!webhook || webhook.includes("PEGA_AQUI")) {
-    statusBox.classList.add("err");
-    statusBox.textContent = "Falta configurar el webhook de Discord.";
-    return;
-  }
 
   const name = document.getElementById("name").value.trim();
   const phone = document.getElementById("phone").value.trim();
@@ -27,62 +20,33 @@ form.addEventListener("submit", async (event) => {
     statusBox.textContent = "El nombre, el teléfono y la descripción son obligatorios.";
     return;
   }
-  if (files.length > 3) {
+  if (files.length > 3 || files.some(file => !file.type.startsWith("image/")) ||
+      files.some(file => file.size > 8 * 1024 * 1024)) {
     statusBox.classList.add("err");
-    statusBox.textContent = "Puedes adjuntar como máximo 3 fotografías.";
-    return;
-  }
-  if (files.some(file => !file.type.startsWith("image/"))) {
-    statusBox.classList.add("err");
-    statusBox.textContent = "Adjunta únicamente imágenes.";
-    return;
-  }
-  if (files.some(file => file.size > 8 * 1024 * 1024)) {
-    statusBox.classList.add("err");
-    statusBox.textContent = "Cada imagen debe ocupar como máximo 8 MB.";
+    statusBox.textContent = "Revisa las fotos: máximo 3 imágenes y 8 MB por imagen.";
     return;
   }
 
-  const fields = [
-    { name: "Nombre", value: name },
-    { name: "Teléfono", value: phone },
-    { name: "Descripción", value: description },
-    { name: "Medidas", value: dimensions || "No indicadas" },
-    { name: "Color", value: color || "No indicado" },
-    { name: "Fotografías", value: files.length ? `${files.length} imagen(es) adjunta(s)` : "No adjuntas" }
-  ];
+  const message = [
+    "🆕 NUEVO PEDIDO · 3DMATRIX OFICIAL",
+    "",
+    `Nombre: ${name}`,
+    `Teléfono de contacto: ${phone}`,
+    `Qué quiere fabricar: ${description}`,
+    `Medidas: ${dimensions || "No indicadas"}`,
+    `Color: ${color || "No indicado"}`,
+    `Fotografías seleccionadas en la web: ${files.length}`,
+    "",
+    files.length ? "IMPORTANTE: adjunta también las fotografías seleccionadas en la web a este chat." : ""
+  ].filter(Boolean).join("\n");
 
-  const payload = {
-    username: "3DMATRIX OFICIAL · Pedidos",
-    embeds: [{
-      title: "🆕 NUEVO PEDIDO",
-      color: 10181046,
-      fields: fields.map(f => ({ name: f.name, value: f.value.slice(0, 1024), inline: false })),
-      footer: { text: "Solicitud enviada desde la web de 3DMATRIX OFICIAL" },
-      timestamp: new Date().toISOString()
-    }]
-  };
+  // Número de destino en formato internacional, sin + ni espacios.
+  const whatsappNumber = "34633298839";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-  const body = new FormData();
-  body.append("payload_json", JSON.stringify(payload));
-  files.forEach((file, index) => body.append(`files[${index}]`, file, file.name));
-
-  submitBtn.disabled = true;
-  submitBtn.textContent = "ENVIANDO...";
-  try {
-    const response = await fetch(webhook + "?wait=true", { method: "POST", body });
-    if (!response.ok) throw new Error(`Discord respondió ${response.status}`);
-    form.reset();
-    statusBox.classList.add("ok");
-    statusBox.textContent = "¡Pedido enviado correctamente! Nos pondremos en contacto contigo.";
-  } catch (error) {
-    console.error(error);
-    statusBox.classList.add("err");
-    statusBox.textContent = "No se pudo confirmar el envío. Inténtalo de nuevo más tarde.";
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.textContent = "ENVIAR PEDIDO";
-  }
+  statusBox.classList.add("ok");
+  statusBox.textContent = "Abriendo WhatsApp. Revisa el mensaje y pulsa Enviar para completar tu pedido.";
+  window.location.href = whatsappUrl;
 });
 
 // Efecto nieve ligero

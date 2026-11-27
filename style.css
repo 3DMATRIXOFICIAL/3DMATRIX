@@ -27,3 +27,8 @@
 .tiktok-feature-copy{display:flex;flex-direction:column;gap:5px;min-width:0}.tiktok-feature-copy strong{font-size:clamp(15px,3vw,19px);letter-spacing:.7px}.tiktok-feature-copy small{color:#d8d0e3;font-size:12px;line-height:1.35}.tiktok-feature-arrow{margin-left:auto;font-size:26px;font-weight:900;color:#25f4ee}
 .music-toggle{white-space:nowrap}
 @media(max-width:480px){.tiktok-feature{padding:14px;gap:11px}.tiktok-feature-icon{flex-basis:42px;height:42px;font-size:29px}.tiktok-feature-copy small{font-size:10px}}
+
+
+/* Botón de envío por WhatsApp */
+.whatsapp-submit{background:linear-gradient(100deg,#20c96b,#128c4b);color:#fff;box-shadow:0 6px 20px #20c96b44}
+.whatsapp-submit:hover{filter:brightness(1.08);transform:translateY(-1px)}

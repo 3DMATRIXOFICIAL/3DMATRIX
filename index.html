@@ -23,7 +23,7 @@
 
     <section class="panel">
       <h2>Cuéntanos qué necesitas</h2>
-      <p class="intro">Rellena los campos obligatorios y enviaremos tu solicitud directamente a nuestro Discord.</p>
+      <p class="intro">Rellena los campos y prepara tu pedido para enviárnoslo directamente por WhatsApp.</p>
       <form id="orderForm">
         <label for="name">Nombre <b class="required">Obligatorio</b></label>
         <input id="name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required maxlength="80">
@@ -47,10 +47,10 @@
         <small class="hint">Puedes adjuntar hasta 3 imágenes. Máximo 8 MB por imagen.</small>
 
         <label class="consent"><input id="consent" type="checkbox" required> <span>Acepto que se utilicen estos datos para responder a mi solicitud.</span></label>
-        <button id="submitBtn" type="submit">ENVIAR PEDIDO</button>
+        <button id="submitBtn" type="submit" class="whatsapp-submit">🟢 ENVIAR PEDIDO POR WHATSAPP</button>
         <p id="status" class="status" role="status" aria-live="polite"></p>
       </form>
-      <p class="privacy">Tus datos se enviarán al canal de pedidos de 3DMATRIX OFICIAL para poder responder a tu solicitud.</p>
+      <p class="privacy">Al pulsar enviar se abrirá WhatsApp con tu pedido preparado. Tendrás que confirmar el envío. Si adjuntas fotografías aquí, recuerda añadirlas también en el chat de WhatsApp.</p>
     </section>
     <footer>
       © 3DMATRIX OFICIAL
@@ -68,7 +68,6 @@
     <audio id="backgroundMusic" src="autumn-chill.mp3" loop preload="auto"></audio>
   </aside>
 
-  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
